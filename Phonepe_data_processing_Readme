@@ -1,0 +1,19 @@
+Phonepe Data Processing(ETL)
+      Python script is designed to retrieve, process, and load data from the PhonePe repository on GitHub into a PostgreSQL database for further analysis. The PhonePe repository contains various data files, including user data, transaction data, and geographical information. This script aims to extract, transform, and load (ETL) this data into structured tables within a database.
+Before using this script, ensure you have the following prerequisites:
+  Python 3.x
+  GitPython
+  Pandas
+  psycopg2
+  A PostgreSQL database with proper configuration (host, user, password, port, and database name). 
+  You may need to modify the database connection details in the script to match your setup.
+
+This script performs the following steps:
+  repository_cloning(): Clones the PhonePe data repository from GitHub to a local directory.
+  Processes and loads data into the PostgreSQL database:
+    Aggregated_transaction(): Processes transaction data, aggregates it, and stores it in the "Aggregated_transaction" table.
+    Aggregated_users(): Processes user data, aggregates it, and stores it in the "Aggregated_users" table.
+    map_transaction(): Processes geographical transaction data and stores it in the "map_transaction" table.
+    map_users(): Processes geographical user data and stores it in the "map_users" table.
+    top_transaction(): Processes top transaction data and stores it in the "top_transaction" table.
+    top_users(): Processes top user data and stores it in the "top_users" table.
